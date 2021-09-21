@@ -5,10 +5,6 @@ RUN apt-get update && apt-get install -y \
     git \
     libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql \
-    && pecl install \
-        xdebug \
-    && docker-php-ext-enable \
-        xdebug \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN usermod -u 1000 www-data
