@@ -15,14 +15,12 @@
 ## To check, follow these steps:
 1) run ```docker-compose up -d --build```
 
-2) go in container ```docker-compose exec php-test bash```
+2) install dependencies ```docker-compose exec -T php-sj bash -c "composer install"```
 
-3) install dependencies ```docker-compose exec -T php-sj bash -c "composer install"```
+3) copy /app/.env-example to /app/.env or create yourself
 
-4) copy /app/.env-example to /app/.env or create yourself
+4) run migrations ```docker-compose exec -T php-sj bash -c "php bin/console doctrine:migrations:migrate"```
 
-5) run migrations ```docker-compose exec -T php-sj bash -c "php bin/console doctrine:migrations:migrate"```
+5) run fixtures ```docker-compose exec -T php-sj bash -c "php bin/console doctrine:fixtures:load"```
 
-6) run fixtures ```docker-compose exec -T php-sj bash -c "php bin/console doctrine:fixtures:load"```
-
-7) check  API endpoints http://0.0.0.0/voen and http://0.0.0.0/{students-id}
+6) check  API endpoints http://0.0.0.0/voen and http://0.0.0.0/{students-id}
