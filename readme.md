@@ -23,4 +23,4 @@
 
 5) run fixtures ```docker-compose exec -T php-sj bash -c "php bin/console doctrine:fixtures:load"```
 
-6) check  API endpoints http://0.0.0.0/voen and http://0.0.0.0/{students-id}
+6) check  API endpoints http://0.0.0.0/voen and http://0.0.0.0/student-courses/{students-id}
