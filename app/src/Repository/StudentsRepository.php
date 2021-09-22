@@ -22,7 +22,7 @@ class StudentsRepository extends ServiceEntityRepository
     public function findByForVoen()
     {
         return $this->createQueryBuilder('s')
-            ->where('s.age >= :age')
+            ->where('s.age = :age')
             ->setParameter('age', '18')
             ->andWhere('s.gender = :gender')
             ->setParameter('gender', 'Male')
