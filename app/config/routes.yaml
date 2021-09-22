@@ -2,6 +2,6 @@ courses:
     path: /student-courses/{studentId}
     controller: App\Controller\StudentCoursesController::getCourses
 
-stydents-voen:
+students-voen:
     path: /voen
     controller: App\Controller\StudentsController::getVoen
